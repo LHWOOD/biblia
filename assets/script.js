@@ -22,8 +22,9 @@ function getHoly() {
     .then(function (data) {
       console.log(data);
 
+      holy.setAttribute("style", "display: none");
       let verse = document.createElement("p");
-      verse.textContent = data.text;
+      verse.textContent = '"' + data.text + '"';
       here.appendChild(verse);
     });
 }
