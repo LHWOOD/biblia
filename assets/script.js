@@ -1,5 +1,9 @@
 const holy = document.querySelector("#btn");
 const here = document.querySelector("#place");
+let option = ["Matthew", "Mark", "Luke", "John"];
+let book = option[Math.floor(Math.random() * option.length)];
+let chapter = Math.floor(Math.random() * 10);
+let verse = Math.floor(Math.random() * 10);
 
 const inputHandler = function (event) {
   event.preventDefault();
@@ -8,7 +12,8 @@ const inputHandler = function (event) {
 };
 
 function getHoly() {
-  let requestUrl = "https://bible-api.com/john 3:16";
+  let requestUrl =
+    "https://bible-api.com/" + book + " " + chapter + ":" + verse + "";
 
   fetch(requestUrl)
     .then(function (response) {
