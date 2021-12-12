@@ -8,7 +8,7 @@ let verse = Math.floor(Math.random() * 10);
 const inputHandler = function (event) {
   event.preventDefault();
   // let verse = holyInput.value;
-  // getHoly();
+  getHoly();
 };
 
 function getHoly() {
