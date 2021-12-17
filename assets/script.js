@@ -1,5 +1,6 @@
 const holy = document.querySelector("#btn");
 const here = document.querySelector("#place");
+const spot = document.querySelector("#title");
 let option = ["Matthew", "Mark", "Luke", "John"];
 let book = option[Math.floor(Math.random() * option.length)];
 let chapter = Math.floor(Math.random() * 10);
@@ -23,8 +24,14 @@ function getHoly() {
       console.log(data);
 
       holy.setAttribute("style", "display: none");
-      let verse = document.createElement("p");
-      verse.textContent = '"' + data.text + '"';
+
+      // const ref = document.createAttribute("p");
+      const verse = document.createElement("p");
+
+      // ref.textContent = data.reference;
+      verse.textContent = data.reference + '"' + data.text + '"';
+
+      // spot.append(ref);
       here.appendChild(verse);
     });
 }
